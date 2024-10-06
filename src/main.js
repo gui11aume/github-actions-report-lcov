@@ -174,6 +174,7 @@ async function summarize(coverageFile) {
     .split(/\r?\n/)
 
   lines.shift(); // Removes "Reading tracefile..."
+  lines.splice(2, 1); // Removes "functions.."
 
   return lines.join('\n');
 }
@@ -196,7 +197,7 @@ async function detail(coverageFile, octokit) {
     coverageFile,
     '--list-full-path',
     '--rc',
-    'lcov_branch_coverage=1',
+    'lcov_branch_coverage=1'
   ], options);
 
   let lines = output

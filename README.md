@@ -46,7 +46,7 @@ jobs:
     - name: Setup LCOV
       uses: hrishikesh-kadam/setup-lcov@v1
     - name: Report code coverage
-      uses: zgosalvez/github-actions-report-lcov@v3
+      uses: gui11aume/github-actions-report-lcov@v4.1.17
       with:
         coverage-files: coverage/lcov.*.info
         minimum-coverage: 90
@@ -56,10 +56,6 @@ jobs:
         update-comment: true
 ```
 *Note:* Only the `pull_request` and `pull_request_target` events are supported. This action does nothing when triggered by other event types.
-
-### Flutter Workflows
-
-This is used in my opinionated [GitHub Actions: Flutter Workflows](https://github.com/zgosalvez/github-actions-flutter-workflows) repository along with other actions for a complete end-to-end DevOps experience.
 
 ## License
 The scripts and documentation in this project are released under the [MIT License](LICENSE.md)
